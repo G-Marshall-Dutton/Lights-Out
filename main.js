@@ -94,6 +94,8 @@ function ToggleSiblings(x, y){
 function ReInit(progress = true){
     console.log("progess", progress)
     level = progress ? level + 1 : level
+
+    levelCount.innerHTML = level
     boardSize = MIN_ROWS + level
 
     lightTarget = boardSize ** 2
