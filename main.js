@@ -3,7 +3,7 @@ const MIN_ROWS = 2
 var url = new URL(window.location.href);
 var level = url.searchParams.get('level');
 if (level) { 
-   level = Math.min(Math.max(level, 1), 16) // TODO
+   level = Math.min(Math.max(level, 1), 16)
 } else {
     level = 1 
 }
@@ -43,7 +43,7 @@ function BuildBoard(){
             BuildLight(i, j)
         }
     }
-    console.log("Board", gameBoard)
+    //console.log("Board", gameBoard)
 }
 
 function BuildLight(x, y){
@@ -84,7 +84,7 @@ function ToggleSiblings(x, y){
         return sibling
     })
 
-    console.log('non null siblings', siblings)
+    //console.log('non null siblings', siblings)
 
     siblings.forEach((sibling) => {
         ToggleLight(sibling)
@@ -92,7 +92,7 @@ function ToggleSiblings(x, y){
 }
 
 function ReInit(progress = true){
-    console.log("progess", progress)
+    //console.log("progess", progress)
     level = progress ? level + 1 : level
 
     levelCount.innerHTML = level
