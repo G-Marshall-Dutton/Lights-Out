@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#level,
+#restart {
+    position: absolute;
+    top: 0px;
+    margin: 30px;
+}
+
+#level {
+    left: 10vw;
+    font-weight: bold;
+}
+
+#restart {
+    right: 10vw;
+    cursor: pointer;
+}
+
+#game-board {
+    display: grid;
+    width: max-content;
+    margin: auto;
+    gap: 6px;
+}
+
+#game-board .light {
+    width: 32px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #a3a3a3;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#game-board .light.active {
+    background-color: #9bc0e1;
+}
